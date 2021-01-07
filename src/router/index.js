@@ -1,23 +1,66 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Blogs from "../views/Blogs";
+import Education from "../views/Education";
+import Experience from "../views/Experience";
+import Login from "../views/Login";
+import News from "../views/News";
+import Profile from "../views/Profile";
+import Projects from "../views/Projects";
+import Register from "../views/Register";
+import Services from "../views/Services";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    component: Profile
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/login",
+    name: "Login",
+    component: Login
+  },
+  {
+    path: "/blogs",
+    name: "Blogs",
+    component: Blogs
+  },
+  {
+    path: "/education",
+    name: "Education",
+    component: Education
+  },
+  {
+    path: "/experience",
+    name: "Experience",
+    component: Experience
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: News
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+    component: Projects
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register
+  },
+  {
+    path: "/services",
+    name: "Services",
+    component: Services
   }
 ];
 
