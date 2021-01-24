@@ -1,7 +1,13 @@
 <template>
-    <nav class="w-1/4 p-5 bg-indigo-600 text-white">
-        <ul>
-            <li class="py-3 cursor-pointer" v-for="(link, index) in navLinks" :key="index">{{link.name}}</li>
+    <nav class="w-1/4 p-5 bg-indigo-600 text-white z-10 fixed">
+        <ul class="flex flex-col">
+            <router-link 
+                class="py-3 cursor-pointer"
+                v-for="(link, index) in navLinks"
+                :key="index"
+                :to="{ name: link.name }">
+                {{link.name}}
+            </router-link>
         </ul>
     </nav>
 </template>

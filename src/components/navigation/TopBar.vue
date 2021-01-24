@@ -1,10 +1,10 @@
 <template>
     <nav class="w-full h-10 flex justify-between items-center"
         :class="background">
-        <Hamburger />
+        <Hamburger v-on:got-clicked="handleClick"/>
         <div class="left">
             <p class="p-4"
-                :class="textColor">Portfolio CMS
+                :class="textColor">{{ title }}
             </p>
         </div>
         
@@ -22,6 +22,11 @@
 <script>
     import Hamburger from "./Hamburger"
     export default {
+        data(){
+            return {
+                title: "Portfolio CMS"
+            }
+        },
         props: ["background", "textColor"],
         computed: {
             navLinks(){
@@ -33,6 +38,11 @@
         },
         components: {
             Hamburger
+        },
+        methods: {
+            handleClick(){
+                this.$emit("got-clicked")
+            }
         }
     }
 </script>
