@@ -1,12 +1,13 @@
 <template>
-    <section class="m-2" :class="[shadow, infoSize, padding]">
+    <section class="m-2" 
+        :class="[shadow, infoSize, padding]">
         <div class="w-full flex flex-col items-center">
             <img class="rounded-full h-10 w-10"
                 :src="profileInfo.img">
 
-            <p>{{profileInfo.name}}</p>
+            <p class="text-xl">{{profileInfo.name}}</p>
         </div>
-        <div class="flex justify-between">
+        <div class="flex justify-between pt-4 pb-4">
             <p>{{ profileInfo.email }}</p>
             <p>{{ profileInfo.phone }}</p>
         </div>

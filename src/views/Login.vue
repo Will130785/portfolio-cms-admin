@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-full">
         This will be the login page
     </div>
 </template>
