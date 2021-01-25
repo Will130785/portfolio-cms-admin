@@ -6,7 +6,10 @@
         <div>
             <div>
                 <ul class="flex justify-between">
-                    <li v-for="(item, index) in overviewTitles" :key="index">{{ item }}</li>
+                    <li v-for="(item, index) in overviewTitles" 
+                        :key="index">
+                        {{ item }}
+                    </li>
                 </ul>
             </div>
             <slot></slot>
